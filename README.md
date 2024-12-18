@@ -3,6 +3,10 @@
 # Badminton Bot
 *Sends a message on Telegram with the available badminton courts of each given venue*
 
+## Showcase
+
+![example](Example.png)
+
 ## Features
 
 - Able to choose between groups of community centres (CCs) to check
