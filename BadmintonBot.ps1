@@ -82,7 +82,7 @@ $isError = $true
 
 while (-not($stream -eq "1" -or $stream -eq "2" -or $stream -eq "3"))
 {
-    $stream = Read-Host -Prompt "1: george`n2: imgg`n3: coders`nstream"
+    $stream = Read-Host -Prompt "1: george`n2: imgg`n3: coders`nStream"
 }
 
 if ($stream -eq "1")
@@ -114,7 +114,15 @@ while ($isError)
         {
             $date = "{0:D2}" -f [int]$date
             $month = "{0:D2}" -f ((Get-Date).Month + 1)
-            $date = "$date/$month/$((Get-Date).Year)"
+            $year = $((Get-Date).Year)
+            
+            if ($month -eq "13")
+            {
+                $month = "01"
+                ++$year
+            }
+
+            $date = "$date/$month/$year"
         }
 
         $isError = $false
